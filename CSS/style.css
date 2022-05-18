@@ -1,0 +1,375 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Titillium+Web:wght@300;400;600&display=swap");
+
+:root {
+  --font1: "Titillium Web", sans-serif;
+  --font2: "Poppins", sans-serif;
+  --color1: #002574;
+  --color2: #5ce1e6;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+canvas {
+  background: linear-gradient(0deg, #ffffff, 80%, #c4c4c4);
+  position: fixed;
+  height: 100%;
+  width: 100%;
+}
+
+.container {
+  pointer-events: none;
+  position: relative;
+  height: 100vh;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  background: linear-gradient(0deg, #ffffff, 80%, #c4c4c4);
+  padding: 2px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(transparent, #002574);
+  border-radius: 10px;
+}
+
+header {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: all 0.5s ease;
+}
+
+header h3,
+header h5,
+header span {
+  margin-left: 20rem;
+}
+
+header h3 {
+  font-size: 8.6rem;
+  font-family: var(--font1);
+  color: #007bb9;
+  font-weight: 600;
+  cursor: defaolt;
+}
+
+header h5 {
+  font-size: 6.2rem;
+  font-family: var(--font1);
+  color: #007bb9;
+  letter-spacing: 0.8px;
+  cursor: defaolt;
+  margin-top: -10px;
+}
+
+header span {
+  font-size: 3.5rem;
+  color: rgb(13, 199, 212);
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+header span a {
+  color: rgb(13, 199, 212);
+  letter-spacing: 2px;
+  margin-left: 10px;
+  text-decoration: none;
+  pointer-events: auto;
+  cursor: pointer !important;
+  z-index: 1000;
+}
+
+header span a:hover {
+  text-decoration: underline;
+}
+
+.swipe_btn > a {
+  bottom: 20px;
+  position: absolute;
+  transform: translateX(-50%);
+  left: 50%;
+  width: 50px;
+  color: #000;
+  height: 50px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  pointer-events: auto;
+  font-size: 40px;
+  animation: moved 1.4s infinite linear alternate;
+}
+
+.swipe_btn a:hover {
+  animation: none;
+}
+
+.swipe_btn a:hover {
+  animation: none;
+}
+
+@keyframes moved {
+  0% {
+    bottom: 20px;
+  }
+
+  100% {
+    bottom: 40px;
+  }
+}
+
+.points {
+  display: flex;
+  position: relative;
+  padding: 20px;
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
+  z-index: 2 !;
+}
+
+.points .heading {
+  width: 100%;
+  padding-left: 5rem;
+  display: flex;
+  align-items: center;
+}
+
+.points .heading > div {
+  font-size: 8rem;
+  margin-right: 15px;
+  border-radius: 50%;
+  font-family: var(--font1);
+  font-weight: bold;
+  color: var(--color1);
+}
+
+.points .heading h3 {
+  font-size: 4rem;
+  letter-spacing: 2px;
+  font-family: var(--font2);
+  color: var(--color1);
+  text-transform: capitalize;
+}
+
+.points .content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.points .content ul {
+  width: 100%;
+  padding-left: 20rem;
+  padding-right: 10rem;
+}
+
+.points .content ul li {
+  display: flex;
+  align-items: flex-start;
+  font-size: 2rem;
+  font-family: var(--font2);
+  color: var(--color2);
+  font-weight: 600;
+  margin-top: 25px;
+}
+
+.points .content ul li i {
+  font-size: 3rem;
+  color: var(--color1);
+  margin-right: 15px;
+  animation: rot 4s linear infinite;
+}
+
+@keyframes rot {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.picture {
+  height: 300px;
+  width: 600px;
+}
+
+.points#point_4 .content ul li:nth-child(3) {
+  padding-left: 5rem;
+  margin-top: 0;
+}
+
+.points#point_4 .content ul li:nth-child(3) a {
+  pointer-events: auto;
+  color: var(--color1);
+  text-decoration: none;
+}
+
+.points#point_4 .content ul li:nth-child(3) a:hover {
+  text-decoration: underline;
+}
+
+.points#point_6 > p {
+  font-family: var(--font2);
+  margin-left: 12rem;
+  font-size: 15px;
+  color: var(--color1);
+  font-weight: 800;
+  padding-right: 200px;
+  margin-top: -30px;
+}
+
+.points#point_6 > p a {
+  text-decoration: none;
+  pointer-events: auto;
+}
+
+.points#point_6 > p a:hover {
+  text-decoration: underline;
+}
+
+details {
+  pointer-events: auto;
+}
+details summary {
+  cursor: pointer;
+}
+details summary::marker {
+  color: #002574;
+}
+
+details li {
+  margin-left: 20px;
+  font-size: 1.9rem !important;
+  color: #007bb9 !important;
+  font-weight: 900 !important;
+  margin-top: 5px !important;
+}
+details p {
+  margin-left: 20px;
+  font-size: 18px !important;
+  color: #007bb9 !important;
+  font-weight: 900 !important;
+  margin-top: 5px !important;
+}
+
+@media screen and (max-width: 800px) {
+  html {
+    font-size: 32%;
+  }
+
+  .points {
+    height: 70vh;
+  }
+  .points .content ul li {
+    font-size: 3rem;
+  }
+  .picture {
+    height: 250px;
+    width: 450px;
+  }
+
+  .points#point_6 > p {
+    font-size: 12px;
+    margin-top: -20px;
+  }
+}
+
+@media screen and (max-width: 570px) {
+  .points .content {
+    flex-direction: column;
+    justify-content: space-between;
+    height: 60vh;
+  }
+  .picture {
+    height: 200px;
+    width: 400px;
+  }
+  .points {
+    height: 90vh;
+  }
+  img {
+    height: 100%;
+    width: 100%;
+  }
+  header h3,
+  header h5,
+  header span {
+    margin-left: 10rem;
+  }
+  .points#point_6 > p {
+    font-size: 10px;
+    margin-top: 10px;
+    padding-right: 0;
+  }
+  .swipe_btn {
+    display: none;
+  }
+
+  .swipe_btn:nth-child(1) {
+    display: block !important;
+  }
+}
+@media screen and (max-width: 440px) {
+  .points .content {
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 100vh !important;
+  }
+
+  .points .content ul {
+    padding-left: 20px;
+  }
+
+  .points .heading {
+    padding-left: 0;
+  }
+
+  .points .content ul {
+    padding-right: 0;
+    padding-left: 10px;
+  }
+
+  .points .content {
+    height: 40vh;
+  }
+
+  header {
+    height: 90vh;
+  }
+
+  header h3,
+  header h5,
+  header span {
+    margin-left: 5rem;
+  }
+
+  .points:nth-child(2) {
+    margin-top: 30px;
+  }
+
+  header h3 {
+    font-size: 6.5rem;
+  }
+  header h5 {
+    font-size: 5.5rem;
+  }
+  header span {
+    font-size: 2.9em;
+  }
+}
